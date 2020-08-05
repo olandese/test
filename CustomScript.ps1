@@ -7,3 +7,13 @@ Invoke-WebRequest "https://github.com/docker/compose/releases/download/1.26.2/do
 docker pull olandese/chatapplication
 docker pull microsoft/mssql-server-windows-developer
 docker pull olandese/rabbit-qs2
+
+$url = "https://raw.githubusercontent.com/olandese/test/master/docker-compose.yml"
+$output = "docker-compose.yml"
+Invoke-WebRequest -Uri $url -OutFile $output
+
+$url = "https://raw.githubusercontent.com/olandese/test/master/.env"
+$output = ".env"
+Invoke-WebRequest -Uri $url -OutFile $output
+
+docker-compose  -f "docker-compose.yml" up -d
