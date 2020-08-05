@@ -16,4 +16,4 @@ $url = "https://raw.githubusercontent.com/olandese/test/master/.env"
 $output = ".env"
 Invoke-WebRequest -Uri $url -OutFile $output
 
-docker-compose  -f "docker-compose.yml" up -d
+docker-compose -f "docker-compose.yml" up -d
