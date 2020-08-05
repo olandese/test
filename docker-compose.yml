@@ -4,7 +4,6 @@ services:
   chatapplication:
     depends_on:
       - rabbitmq
-      - sqlserver
     image: olandese/chatapplication
     container_name: chat
     environment:
@@ -18,12 +17,3 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
-
-  sqlserver:
-    image: microsoft/mssql-server-windows-developer
-    container_name: sqlserver
-    environment:
-      - sa_password=Q1w2e3r4t5y6
-      - ACCEPT_EULA=Y
-    ports:
-      - 1433:1433
