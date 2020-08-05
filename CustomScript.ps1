@@ -5,7 +5,6 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-Windows-x86_64.exe" -UseBasicParsing -OutFile $Env:ProgramFiles\Docker\docker-compose.exe
 docker pull olandese/chatapplication
-docker pull microsoft/mssql-server-windows-developer
 docker pull olandese/rabbit-qs2
 
 $url = "https://raw.githubusercontent.com/olandese/test/master/docker-compose.yml"
