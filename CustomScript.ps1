@@ -10,5 +10,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-Windows-x86_64.exe" -UseBasicParsing -OutFile $Env:ProgramFiles\Docker\docker-compose.exe
 #docker pull olandese/rabbit-qs2
-docker run --isolation=hyperv -d -p 15672:15672 -p 5672:5672 --name rabbitmq olandese/rabbit-qs2
-docker run --isolation=hyperv -dt -p 5000:80 --name rabbit olandese/rabbit
+docker pull olandese/chatapplication
+docker pull microsoft/mssql-server-windows-developer
+docker pull olandese/rabbit-qs2
