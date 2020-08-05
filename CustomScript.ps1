@@ -15,6 +15,6 @@ docker pull olandese/rabbit-qs2
 #$output = ".env"
 #Invoke-WebRequest -Uri $url -OutFile $output
 
-cd c:\docker
+cd c:\POC\docker
 
 docker-compose -f "docker-compose.yml" up -d
